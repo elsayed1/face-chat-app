@@ -1,0 +1,64 @@
+<% let scrpt =" " ;%>
+
+<% include ../templates/header.ejs%>
+
+
+<body>
+<header class="masthead" style="background-image: url('/img/home-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="site-heading">
+                    <h1>Clean Blog</h1>
+                    <span class="subheading">A Blog Theme by Start Bootstrap</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="container">
+
+
+    <form method="post" class="create-post" action="create" enctype="multipart/form-data">
+        <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+                <label>title</label>
+                <input type="text" class="form-control" placeholder="title" name="title" required>
+                <p class="help-block text-danger"></p>
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+                <label>Sub Title</label>
+                <input type="text" class="form-control" placeholder="Sub Title" name="subtitle" required >
+                <p class="help-block text-danger"></p>
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+                <label>Post</label>
+                <textarea rows="5" class="form-control" placeholder="Post" name="post" required></textarea>
+                <p class="help-block text-danger"></p>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+                <label>Sub Title</label>
+                <input type="file"   name="avatar"  >
+                <p class="help-block text-danger"></p>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="form-group text-center">
+            <button type="submit" class="btn btn-primary " id="sendMessageButton">Send</button>
+        </div>
+    </form>
+</div>
+
+<%include ../templates/nav.ejs%>
+
+<%include ../templates/footer.ejs%>
