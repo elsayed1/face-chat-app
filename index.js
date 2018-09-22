@@ -6,6 +6,7 @@ const multer = require('multer');
 const connectMongo = require ('connect-mongo');
 const ejs = require('ejs');
 
+const port = process.env.PORT || 3000;
 var usersStorage = multer.diskStorage({
     destination: function (req, file, cb) {
         cb(null, 'uploads/posts')
@@ -88,4 +89,4 @@ app.get('/contact',(req,res)=>{
 
 
 
-app.listen(3000);
+app.listen(port);
